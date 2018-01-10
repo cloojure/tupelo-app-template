@@ -1,7 +1,7 @@
 (ns tst.{{name}}.core
   (:use {{name}}.core tupelo.core tupelo.test)
   (:require 
-    [clojure.string :as str] ))
+    [tupelo.string :as ts] ))
 
 (dotest
   (is= (spyx (+ 2 3)))
