@@ -1,4 +1,4 @@
-# tupelo-app
+# {{name}}
 
 A Leiningen template for FIXME.
 

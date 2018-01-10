@@ -12,6 +12,8 @@
     (main/info "Generating fresh 'lein new' tupelo-app project.")
     (->files data
       ["project.clj"                    (render "project.clj"   data) ]
+      ["README.adoc"                    (render "README.adoc"   data) ]
+      ["LICENSE"                        (render "LICENSE"       data) ]
       ["src/{{sanitized}}/core.clj"     (render "core_main.clj" data) ]
       ["src/tst/{{sanitized}}/core.clj" (render "core_tst.clj"  data) ]
     )))
