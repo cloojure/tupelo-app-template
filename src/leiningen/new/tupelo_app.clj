@@ -16,5 +16,5 @@
       ["LICENSE"                                  (render "LICENSE"       data) ]
       ["src/{{sanitized}}/core.clj"               (render "core_main.clj" data) ]
       ["src/tst/{{sanitized}}/core.clj"           (render "core_tst.clj"  data) ]
-      ["src/tst/{{sanitized}}/_bootstrap.clj"     (render "_bootstrap.clj"  data) ]
+      ["src/_bootstrap.clj"                       (render "_bootstrap.clj"  data) ]
     )))
