@@ -1,8 +1,9 @@
 (ns leiningen.new.tupelo-app
-  (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
+  (:require [leiningen.new.templates :refer [renderer raw-resourcer name-to-path ->files]]
             [leiningen.core.main :as main] ))
 
 (def render (renderer "tupelo-app"))
+(def raw    (raw-resourcer "tupelo-app"))
 
 (defn tupelo-app
   "FIXME: write documentation"
@@ -17,4 +18,8 @@
       ["src/{{sanitized}}/core.clj"               (render "core_main.clj" data) ]
       ["src/tst/{{sanitized}}/core.clj"           (render "core_tst.clj"  data) ]
       ["src/_bootstrap.clj"                       (render "_bootstrap.clj"  data) ]
+      ["resources/clojure.png"                    (raw    "clojure.png")          ]
+      ["resources/thomas-paine.txt"               (raw    "thomas-paine.txt")     ]
+      ["src-java/{{sanitized}}/Calc.java"         (render "Calc.java"  data) ]
+      ; "doc" ; <= creates empty dir
     )))

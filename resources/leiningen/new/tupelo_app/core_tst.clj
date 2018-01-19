@@ -1,11 +1,18 @@
 (ns tst.{{name}}.core
   (:use {{name}}.core tupelo.core tupelo.test)
   (:require 
-    [tupelo.string :as ts] ))
+    [clojure.java.io :as io]
+    [tupelo.string :as ts] )
+  (:import [{{name}} Calc]))
 
 (dotest
   (is= (spyx (+ 2 3)))
   (throws? (/ 5 0))
   (isnt false)
+
+  (let [crisis-txt (slurp (io/resource "thomas-paine.txt")) ]
+    (is (truthy? (re-find #"THESE are the times" crisis-txt))))
+
+  (is= 5.0 (Calc/add 2 3))
 )
 
