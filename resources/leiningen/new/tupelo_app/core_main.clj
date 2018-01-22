@@ -3,7 +3,7 @@
   (:use tupelo.core)
   (:require
     [clojure.string :as str]
-    [tupelo.schema :as tsk]
+    [plumatic.schema :as s]
   ))
 
 (defn -main []
