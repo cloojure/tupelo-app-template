@@ -1,9 +1,9 @@
 (ns tst.{{name}}.core
   (:use {{name}}.core tupelo.core tupelo.test)
   (:require 
-    [clojure.java.io :as io]
-    [tupelo.string :as ts] )
-  (:import [{{name}} Calc]))
+    [clojure.string :as str]
+    [clojure.java.io :as io] )
+  (:import [{{name}} Calc] ))
 
 (dotest
   (is= (spyx (+ 2 3)))
