@@ -13,10 +13,12 @@
   (let [crisis-txt (slurp (io/resource "thomas-paine.txt")) ]
     (is (truthy? (re-find #"THESE are the times" crisis-txt))))
 
-  (is= 5.0 (Calc/add 2 3))
+  (is= 4   (mult 2 2))
+  (is= 5.0 (mult 2 2.5))
 
-  (let [result ({{name}}.Calc/incVals {"able" 1 "baker" 2} ) ]
-    (is= {"able" 2 "baker" 3} (spyxx result))
+  (is= 5.0 (spyx (Calc/add 2 3)))
+  (let [result (spyxx ({{name}}.Calc/incVals {"able" 1 "baker" 2} )) ]
+    (is= {"able" 2 "baker" 3} result)
     (is= java.util.HashMap (type result)))
 )
 

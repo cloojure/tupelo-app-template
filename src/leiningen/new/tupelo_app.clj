@@ -15,7 +15,7 @@
       ["project.clj"                              (render "project.clj"     data) ]
       ["README.adoc"                              (render "README.adoc"     data) ]
       ["LICENSE"                                  (render "LICENSE"         data) ]
-      ["generate-docs.bash"                       (render "generate-docs.bash" data) ]
+      ["generate-docs.bash"                       (render "generate-docs.bash" data) :executable true]
       ["src/{{sanitized}}/core.clj"               (render "core_main.clj"   data) ]
       ["src/tst/{{sanitized}}/core.clj"           (render "core_tst.clj"    data) ]
       ["src/_bootstrap.clj"                       (render "_bootstrap.clj"  data) ]

@@ -6,6 +6,12 @@
     [schema.core :as s]
   ))
 
+(s/defn mult :- s/Num
+  "Multiply two numbers"
+  [a :- s/Num
+   b :- s/Num ]
+  (* a b))
+
 (defn -main []
   (println "main - enter")
   )
